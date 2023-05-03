@@ -149,12 +149,12 @@ Mat drawGBRHist(std::vector <int > blue_hist, std::vector <int > green_hist ,std
         
        Mat histogram;
        Mat cumulative_histogram;
+       std::vector <std::vector <int > > hist = calculateHist(img);
 
        if (img.channels() == 3)/*if image is in gbr*/ {
 
 
 
-           std::vector <std::vector <int > > hist = calculateHist(img);
            std::vector <int > acc_blue_hist = accumulate(hist[0]);
            std::vector <int > acc_green_hist = accumulate(hist[1]);
            std::vector <int > acc_red_hist = accumulate(hist[2]);
@@ -165,9 +165,8 @@ Mat drawGBRHist(std::vector <int > blue_hist, std::vector <int > green_hist ,std
 
        else  {
 
-           std::vector <int >  hist = calculateHist(img)[0];
-           std::vector <int > acc_grey_hist = accumulate(hist);
-           histogram = drawGreyHist(hist);
+           std::vector <int > acc_grey_hist = accumulate(hist[0]);
+           histogram = drawGreyHist(hist[0]);
            cumulative_histogram = drawGreyHist(acc_grey_hist);
 
 
