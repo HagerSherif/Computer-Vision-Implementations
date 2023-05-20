@@ -14,7 +14,7 @@ Mat hough_circle(cv::Mat _img,int rmin,int rmax,int bin_threshold)
 
     for (int r = rmin; r < rmax; r++)
     {
-        for (int t = 0; t < 360; t += 5) 
+        for (int t = 0; t < 360; t += 5)
         {        
             circle_candidates.push_back({ r,(int)(r * cos(t*DEG2RAD )),(int)(r * sin(t * DEG2RAD)) });
         }
@@ -23,7 +23,7 @@ Mat hough_circle(cv::Mat _img,int rmin,int rmax,int bin_threshold)
         {
             for (int x = 0; x < width; x++)
             {
-                if (img.at<uchar>(y, x) != 0) {
+                if (img.at<uchar>(y, x) != 0)  //if this pixel is edge{
     
                     for (int i = 0; i < circle_candidates.size(); i++)
                     {
