@@ -12,7 +12,7 @@
   - [Segmentation using KMeans clustering](#Segmentation-using-KMeans-clustering)
 
 ## Introduction
-These are some of the algorithms implementations for my computer vision course work.
+These are some of the algorithms from scratch for my computer vision course work. OpenCv is only used for reading and showing images.
 
 
 ## Implementations
