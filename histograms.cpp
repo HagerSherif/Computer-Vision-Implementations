@@ -83,6 +83,9 @@ std::vector <int > normalizeHistogram(std::vector <int > arr,int height) /*norma
 
 }
 
+
+
+/// plotting histogram
 Mat drawGreyHist(std::vector <int > hist) {
     int binSize = 2;
     int  rows = 500;
