@@ -9,7 +9,7 @@ Mat Greyscale(Mat& img)
     }
   
 
-    if (img.channels() == 3)/*if image is in gbr*/ {
+    if (img.channels() == 3)/*if image is in bgr*/ {
 
         Mat img2;
         img2 = Mat(img.rows, img.cols, CV_8UC1, 255);
@@ -20,7 +20,7 @@ Mat Greyscale(Mat& img)
                 Vec3b bgr = img.at< Vec3b>(i, j);
 
                 img2.at< uchar>(i, j) = {
-                   (unsigned char) ((bgr[0] + bgr[1] + bgr[2]) / 3)
+                   (unsigned char) ((bgr[0] + bgr[1] + bgr[2]) / 3)   /// Takes average of blue, green and red
                 };
             }
         }
