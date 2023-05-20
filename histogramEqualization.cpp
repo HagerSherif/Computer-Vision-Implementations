@@ -16,7 +16,7 @@ using namespace std;
 
 
 
-std::vector <std::vector <int >> calculateHist(Mat& img)
+std::vector <std::vector <int >> calculateHist(Mat& img)   /*loops on pixels and count number of each value from 0 to 250 */
 
 {
     std::vector <std::vector <int > > hist;
@@ -58,30 +58,27 @@ std::vector <std::vector <int >> calculateHist(Mat& img)
 
 
 
-std::vector <float > Equalize(std::vector <int > hist ,int numOfPixels) {
-
-   
+std::vector <float > Equalize(std::vector <int > hist ,int numOfPixels) {   
     std::vector <float > new_hist;
-
+    /// Find probability mass function of histogram
     for (int i = 0; i < hist.size(); i++)
     {
-
         float num = (float)hist[i] / (float)numOfPixels;
         new_hist.push_back( num);
     }
+    /// Find cumulative distribution function 
     for (int i = 1; i < new_hist.size(); i++)
     {
         float temp = new_hist[i];
         new_hist[i] = (new_hist[i - 1] + new_hist[i]);
     }
-
+    /// Multiply cumulative distribution function by maximmum intensity value
     for (int i = 1; i < new_hist.size(); i++)
     {
         new_hist[i] = (floor(255 * new_hist[i]));
     }
 
-  return new_hist;
-
+  return new_hist;  /// maps input pixels to output pixels
 }
 
 
@@ -90,7 +87,7 @@ std::vector <float > Equalize(std::vector <int > hist ,int numOfPixels) {
 
 
 
-void ImageEqualization(Mat& img, Mat& dst) /*loops on pixels and count number of each value from 0 to 250 */
+void ImageEqualization(Mat& img, Mat& dst)
 {    
     if (img.empty())
     {
