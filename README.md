@@ -21,10 +21,10 @@ These are some of the algorithms from scratch for my computer vision course work
 <summary>Histogram plotting</summary>
   
 
- ``` RGB Histogram:                         RGB CDF:                          ```    
+ ``` RGB Histogram:                        RGB CDF:                           ```    
 <img width="35%" img height="35%" alt="rgb_histogram" src="https://github.com/HagerSherif/Computer-Vision-Implementations/assets/93436199/bf228b00-bd88-4547-9d17-f75e06724fed"><img width="35%" img height="35%" alt="rgb_cumulative" src="https://github.com/HagerSherif/Computer-Vision-Implementations/assets/93436199/782059e2-6ee3-4c79-a858-2f171c06dc83">
   
- ``` Grey-scale Histogram:                   Grey-scale CDF:                  ```      
+ ``` Grey-scale Histogram:                  Grey-scale CDF:                   ```      
 <img width="35%" img height="35%" alt="gray_cumulative" src="https://github.com/HagerSherif/Computer-Vision-Implementations/assets/93436199/2f234d44-d2a8-47b6-bb6d-5840223d3922"><img width="35%" img height="35%" alt="gray_histo (2)" src="https://github.com/HagerSherif/Computer-Vision-Implementations/assets/93436199/190b864f-50e4-4e20-8755-80aff66bb1c9">  
 
 
@@ -79,7 +79,7 @@ These are some of the algorithms from scratch for my computer vision course work
 <details>
 <summary>Segmentation using KMeans clustering</summary>
 
-   ``` Before:                                  After:                                 ```              
+   ``` Before:                                After:                                 ```              
   <img width="35%" img height="35%" alt="tower" src="https://github.com/HagerSherif/Computer-Vision-Implementations/assets/93436199/fea6add7-b1bf-49ae-8c77-2f5062e34ae2"><img width="35%" img height="35%" alt="tower2" src="https://github.com/HagerSherif/Computer-Vision-Implementations/assets/93436199/08deb3cd-4d8d-47c7-9b97-71ddd7fb0b79">
   
 <img width="35%" img height="35%" alt="veggies" src="https://github.com/HagerSherif/Computer-Vision-Implementations/assets/93436199/55a5e080-deee-4468-9294-6e87890d9554"><img width="35%" img height="35%" alt="another_6_clusters" src="https://github.com/HagerSherif/Computer-Vision-Implementations/assets/93436199/41870bc6-b2d9-4085-bd9b-97d27c6fce65">
