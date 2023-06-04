@@ -25,7 +25,7 @@ These are some of the algorithms from scratch for my computer vision course work
 <img width="35%" img height="35%" alt="rgb_histogram" src="https://github.com/HagerSherif/Computer-Vision-Implementations/assets/93436199/bf228b00-bd88-4547-9d17-f75e06724fed"><img width="35%" img height="35%" alt="rgb_cumulative" src="https://github.com/HagerSherif/Computer-Vision-Implementations/assets/93436199/782059e2-6ee3-4c79-a858-2f171c06dc83">
   
  ``` Grey-scale Histogram:                  Grey-scale CDF:                   ```      
-<img width="35%" img height="35%" alt="gray_histo (2)" src=" https://github.com/HagerSherif/Computer-Vision-Implementations/assets/93436199/190b864f-50e4-4e20-8755-80aff66bb1c9"><img width="35%" img height="35%" alt="gray_cumulative" src="https://github.com/HagerSherif/Computer-Vision-Implementations/assets/93436199/2f234d44-d2a8-47b6-bb6d-5840223d3922">  
+<img width="35%" img height="35%" alt="gray_histo (2)" src="https://github.com/HagerSherif/Computer-Vision-Implementations/assets/93436199/190b864f-50e4-4e20-8755-80aff66bb1c9"><img width="35%" img height="35%" alt="gray_cumulative" src="https://github.com/HagerSherif/Computer-Vision-Implementations/assets/93436199/2f234d44-d2a8-47b6-bb6d-5840223d3922">  
 
 
 
