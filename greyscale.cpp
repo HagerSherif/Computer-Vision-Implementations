@@ -36,8 +36,7 @@ Mat Greyscale(Mat& img)
 
 int main()
     {
-        std::string image_path = "C:/Users/Hager/Downloads/Test_images/young.jpg";
-       Mat img = imread(image_path, IMREAD_COLOR);
+       Mat img = imread("example.jpg", IMREAD_COLOR);
       
        img = Greyscale(img);
 
