@@ -141,8 +141,8 @@ Mat drawGBRHist(std::vector <int > blue_hist, std::vector <int > green_hist ,std
  
   int main()
     {
-        std::string image_path = "C:/Users/Hager/Downloads/Test_images/images.jpeg";
-       Mat img = imread(image_path, IMREAD_COLOR);
+      std::string image_path = "example.jpg";
+      Mat img = imread(image_path, IMREAD_COLOR);
       
       if (img.empty()) 
         {
@@ -155,25 +155,16 @@ Mat drawGBRHist(std::vector <int > blue_hist, std::vector <int > green_hist ,std
        std::vector <std::vector <int > > hist = calculateHist(img);
 
        if (img.channels() == 3)/*if image is in gbr*/ {
-
-
-
            std::vector <int > acc_blue_hist = accumulate(hist[0]);
            std::vector <int > acc_green_hist = accumulate(hist[1]);
            std::vector <int > acc_red_hist = accumulate(hist[2]);
            histogram = drawGBRHist(hist[0], hist[1], hist[2]);
            cumulative_histogram = drawGBRHist(acc_blue_hist, acc_green_hist, acc_red_hist);
        }
-
-
        else  {
-
            std::vector <int > acc_grey_hist = accumulate(hist[0]);
            histogram = drawGreyHist(hist[0]);
            cumulative_histogram = drawGreyHist(acc_grey_hist);
-
-
-
        }
 
        imshow("histogram", histogram); 
