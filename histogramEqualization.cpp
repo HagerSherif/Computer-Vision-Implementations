@@ -146,8 +146,7 @@ void ImageEqualization(Mat& img, Mat& dst)
 
   int main()
     {
-        std::string image_path = "C:/Users/Hager/Downloads/Test_images/images.jpeg";
-       Mat img = imread(image_path, IMREAD_COLOR);
+       Mat img = imread("example.jpg", IMREAD_COLOR);
       
         if (img.empty()) 
         {
