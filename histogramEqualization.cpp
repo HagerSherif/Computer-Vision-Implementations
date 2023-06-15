@@ -144,25 +144,21 @@ void ImageEqualization(Mat& img, Mat& dst)
 
 
 
-  int main()
+  int main() {
+   std::string image_path = "example.jpg";
+   Mat img = imread(image_path, IMREAD_COLOR);
+
+    if (img.empty()) 
     {
-       Mat img = imread("example.jpg", IMREAD_COLOR);
-      
-        if (img.empty()) 
-        {
-            std::cout << "Could not read the image: " << image_path << std::endl;
-            return 1;
-        }
-    
+        std::cout << "Could not read the image: " << image_path << std::endl;
+        return 1;
+    }
 
+    Mat dst;
+    ImageEqualization(img,dst);
+    imshow("equalized", dst);
 
-   
-        Mat dst;
-        ImageEqualization(img,dst);
-        imshow("equalized", dst);
-    
-        waitKey();
-        return 0;
-   
-
+    waitKey();
+    return 0;
+  
 }
