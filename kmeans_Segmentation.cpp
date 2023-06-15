@@ -1,3 +1,15 @@
+#include <opencv2/core.hpp>
+#include <opencv2/imgcodecs.hpp>
+#include <opencv2/highgui.hpp>
+#include <opencv2/imgproc.hpp>
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <cmath>
+#include <iterator>
+#include <map>
+#include <opencv2/features2d/features2d.hpp>
+#include <numeric>
 
 
 double euclidean(const std::vector<int> p1, const std::vector<int> p2) {
@@ -114,6 +126,7 @@ void KMeans(Mat& img, vector<vector<int>>& centroids, vector<int>& labels, int n
 }
 
 
+
 Mat segment(Mat& img, vector<vector<int>>& centroids, vector<int>& labels) {
 
     Mat segmented_img = img;
@@ -140,7 +153,7 @@ Mat segment(Mat& img, vector<vector<int>>& centroids, vector<int>& labels) {
 
 int main()
 {
-    std::string image_path = "C:/Users/Hager/Downloads/Test_images/coins.png";
+    std::string image_path = "example.jpg";
     Mat img = imread(image_path, IMREAD_COLOR);
 
     if (img.empty()) 
@@ -149,9 +162,9 @@ int main()
           return 1;
       }
 
-    vector<int> labels(img.rows * img.cols);
-    int n_clusters=14;
-    vector<vector<int>> centroids (n_clusters);
+    vector<int> labels(img.rows * img.cols);     // Final pixels' labels 
+    int n_clusters=4;                           // choose the desired number of clusters
+    vector<vector<int>> centroids (n_clusters);      // Final clusters' centroids
 
     KMeans(img, centroids, labels, n_clusters = n_clusters);
     Mat segmented_img = segment(img, centroids, labels);
