@@ -1,3 +1,18 @@
+#include <opencv2/core.hpp>
+#include <opencv2/imgcodecs.hpp>
+#include <opencv2/highgui.hpp>
+#include <opencv2/imgproc.hpp>
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <cmath>
+#include <iterator>
+#include <map>
+#include <opencv2/features2d/features2d.hpp>
+#include <numeric>
+
+#define DEG2RAD 0.017453293f
+
 
 Mat hough_circle(cv::Mat _img,int rmin,int rmax,int bin_threshold)
 {
@@ -75,8 +90,8 @@ Mat hough_circle(cv::Mat _img,int rmin,int rmax,int bin_threshold)
 
     int main()
     {
-        std::string image_path = "C:/Users/Hager/Downloads/Test_images/coins.png";
-       Mat img = imread(image_path, IMREAD_COLOR);
+        std::string image_path = "example.jpg";
+        Mat img = imread(image_path, IMREAD_COLOR);
       
        if (img.empty()) 
         {
@@ -92,9 +107,7 @@ Mat hough_circle(cv::Mat _img,int rmin,int rmax,int bin_threshold)
        Mat deteced_circles = hough_circle(img,rmin,rmax,threshold);
        imshow("deteced_circles", deteced_circles);
 
-       
- 
-
+  
        waitKey();
 
        return 0;
